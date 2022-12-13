@@ -62,7 +62,6 @@ module.exports = {
             //for items with plural endings: ends with 's' or 'es'
             //Example: query for 'TOrcH' will match with 'Torches'
             let letters = name.toLowerCase().split('').filter(char => /\w/.test(char))
-            console.log(letters.slice(letters.length - 2, letters.length))
             letters = letters[letters.length - 1] === 's' ?
                 letters.slice(letters.length - 2, letters.length).join('') === 'es' ?
                     letters.slice(0, letters.length - 2) : letters.slice(0, letters.length - 1)
@@ -72,10 +71,7 @@ module.exports = {
         const file = './data/items.json'
         const items = JSON.parse(fs.readFileSync(file, 'utf-8')).items
         for (let item of items) {
-            // console.log(guess(item.name))
-            // console.log(guess(name))
             if (guess(item.name) === guess(name)) {
-                console.log(guess(name))
                 return item
             }
         }
