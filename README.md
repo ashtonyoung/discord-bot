@@ -5,7 +5,7 @@ To use, create your own `config.json` file in the bot directory as such:
 {
     "token": "YOUR-TOKEN",
     "clientId": "YOUR-CLIENT",
-	"guildId": "YOUR-GUILD"
+    "guildId": "YOUR-GUILD"
 }
 ```
 First, run `node deploy-commands.js` to update the commands API. Do this anytime you add/remove a slash command.
