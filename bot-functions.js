@@ -3,6 +3,14 @@ const fs = require('fs')
 // Reusable functions found here
 
 module.exports = {
+    initFiles() {
+        const file = './data/coords.json'
+        try {
+            fs.readFileSync(file, 'utf-8')
+        } catch (err) {
+            fs.writeFileSync(file, JSON.stringify({data: []}), 'utf-8')
+        }
+    },
     duplicateLocation(location) {
         const file = './data/coords.json'
         const coords = JSON.parse(fs.readFileSync(file, 'utf-8')).data

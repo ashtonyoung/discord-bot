@@ -3,6 +3,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, Collection,	 GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
+const { initFiles } = require('./bot-functions');
+
+initFiles()
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
