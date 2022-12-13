@@ -1,0 +1,23 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "first attempt at discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashtonyoung/discord-bot.git"
+  },
+  "author": "Ashton Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashtonyoung/discord-bot/issues"
+  },
+  "homepage": "https://github.com/ashtonyoung/discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "string-table": "^0.1.5"
+  }
+}
